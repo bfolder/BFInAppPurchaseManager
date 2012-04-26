@@ -5,7 +5,7 @@ This is a drop-in manager class which provides an easy access to Apples StoreKit
 ---
 ## How it works
 
-BFInAppPurchaseManager is a singleton class. Use the following methods to load the store and retrieve product(s)
+BFInAppPurchaseManager is a singleton class. Use the following methods to load the store and retrieve product(s):
 
 		[[BFInAppPurchaseManager sharedInstance] loadStoreWithProductIdentifiers: [NSSet setWithObject: @"yourProductId"]];
 		
@@ -16,7 +16,7 @@ states accordingly. The respective transaction is always available with the key 
 ---
 ### Licensing
 
-BFInAppPurchaseManager is licensed under MIT License
+BFInAppPurchaseManager is licensed under MIT License. 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
