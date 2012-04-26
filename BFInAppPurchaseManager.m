@@ -144,7 +144,7 @@
 
 +(id)alloc
 {
-	@throw [NSException exceptionWithName: @"Shared Instance alloc called" reason: @"Call Method +sharedInstance and not -alloc" userInfo: nil];
+	@throw [NSException exceptionWithName: @"SharedInstance -alloc called." reason: @"Do not call -alloc, use +sharedInstance instead." userInfo: nil];
 	return nil;
 }
 
