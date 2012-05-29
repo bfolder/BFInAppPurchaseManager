@@ -79,7 +79,7 @@
     
     NSDictionary *userInfo = [NSDictionary dictionaryWithObjectsAndKeys: transaction, BFInAppPurchaseManagerProductTransaction, nil];
     
-    NSString *name = wasSuccessful ? BFInAppPurchaseManagerProductTransactionSucceededNotification : BFInAppPurchaseManagerProductTransactionFailedNotification;
+    NSString *name = wasSuccessful ? BFInAppPurchaseManagerProductTransactionDidSucceedNotification : BFInAppPurchaseManagerProductTransactionDidFailNotification;
     [[NSNotificationCenter defaultCenter] postNotificationName: name object: self userInfo: userInfo];
 }
 
@@ -98,7 +98,7 @@
     _productsRequest = nil;
     
     // Seems we recieved our products (or maybe not) - Dispatch notification and append product array
-    [[NSNotificationCenter defaultCenter] postNotificationName: BFInAppPurchaseManagerProductsRecievedNotification object: self userInfo: [NSDictionary dictionaryWithObject: _products forKey: BFInAppPurchaseManagerProductArray]];
+    [[NSNotificationCenter defaultCenter] postNotificationName: BFInAppPurchaseManagerDidRecieveProductsNotification object: self userInfo: [NSDictionary dictionaryWithObject: _products forKey: BFInAppPurchaseManagerProductArray]];
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
