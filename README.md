@@ -9,8 +9,8 @@ BFInAppPurchaseManager is a singleton class. Use the following methods to load t
 
 		[[BFInAppPurchaseManager sharedInstance] loadStoreWithProductIdentifiers: [NSSet setWithObject: @"yourProductId"]];
 		
-You should observe `BFInAppPurchaseManagerProductsRecievedNotification` to get all available products. Purchase a product by calling `-purchaseProduct:`.
-`BFInAppPurchaseManagerProductTransactionSucceededNotification` and `BFInAppPurchaseManagerProductTransactionFailedNotification` can be observed to change application
+You should observe `BFInAppPurchaseManagerDidRecieveProductsNotification` to get all available products. Purchase a product by calling `-purchaseProduct:`.
+`BFInAppPurchaseManagerProductTransactionDidSucceedNotification` and `BFInAppPurchaseManagerProductTransactionDidFailNotification` can be observed to change application
 states accordingly. The respective transaction is always available with the key `BFInAppPurchaseManagerProductTransaction` in the userInfo.
 
 ---
